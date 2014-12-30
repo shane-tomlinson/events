@@ -1,0 +1,5 @@
+/node_modules
+/build
+/docs
+.DS_Store
+/tests/bower_components/

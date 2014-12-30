@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="bower_components/mocha/mocha.css">
+
+	<script src="bower_components/mocha/mocha.js"></script>
+	<script src="bower_components/chai/chai.js"></script>
+	<script src="bower_components/sinon/pkg/sinon.js"></script>
+
+  <script>
+    window.mocha.setup('bdd');
+  </script>
+
+
+
+	<script src="../src/events.js"></script>
+	<script src="spec/events.js"></script>
+
+  <title>Events Unit Tests</title>
+
+</head>
+<body>
+
+  <div id="mocha"></div>
+
+  <script>
+    window.addEventListener('load', function() {
+      if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+        mocha.run();
+      }
+    }, false);
+  </script>
+
+</body>
+</html>

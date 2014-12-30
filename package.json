@@ -1,0 +1,34 @@
+{
+  "name": "events",
+  "version": "0.0.0",
+  "description": "A Backbone-like events system",
+  "main": "index.js",
+  "scripts": {
+    "start": "grunt",
+    "test": "grunt test",
+    "setup": "npm install && cd tests && bower install && cd bower_components/sinon && ./build && cd ../../..",
+    "contributors": "git shortlog -s | cut -c8- | sort -f > CONTRIBUTORS.md"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "author": "Shane Tomlinson <shane@shanetomlinson.com>",
+  "license": "MPL 2.0",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-build-control": "git://github.com/robwierzbowski/grunt-build-control#274952",
+    "grunt-bump": "0.0.16",
+    "grunt-bytesize": "0.1.1",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-copy": "0.7.0",
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-contrib-uglify": "0.7.0",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-conventional-changelog": "1.1.0",
+    "grunt-copyright": "0.1.0",
+    "grunt-jscs": "1.1.0",
+    "grunt-mocha": "0.4.11",
+    "load-grunt-tasks": "2.0.0"
+  },
+  "dependencies": {}
+}

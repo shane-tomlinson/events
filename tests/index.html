@@ -6,10 +6,10 @@
 
 	<script src="bower_components/mocha/mocha.js"></script>
 	<script src="bower_components/chai/chai.js"></script>
-	<script src="bower_components/sinon/pkg/sinon.js"></script>
+	<script src="bower_components/sinon/index.js"></script>
 
   <script>
-    window.mocha.setup('bdd');
+    mocha.setup('bdd');
   </script>
 
 
@@ -25,11 +25,9 @@
   <div id="mocha"></div>
 
   <script>
-    window.addEventListener('load', function() {
-      if (navigator.userAgent.indexOf('PhantomJS') < 0) {
-        mocha.run();
-      }
-    }, false);
+    if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+      mocha.run();
+    }
   </script>
 
 </body>

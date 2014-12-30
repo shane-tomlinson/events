@@ -31,6 +31,9 @@ module.exports = function (grunt) {
   grunt.registerTask('default',
     ['build']);
 
+  grunt.registerTask('doc',
+    ['markdox']);
+
   grunt.registerTask('release',
-    ['build', 'bump-only', 'changelog', 'bump-commit', 'buildcontrol']);
+    ['build', 'bump-only', 'changelog', 'bump-commit', 'doc', 'buildcontrol']);
 };

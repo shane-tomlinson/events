@@ -5,15 +5,11 @@
 module.exports = function (grunt) {
   'use strict';
 
-  grunt.config('yuidoc', {
-    compile: {
-      name: '<%= pkg.name %>',
-      description: '<%= pkg.description %>',
-      version: '<%= pkg.version %>',
-      options: {
-        paths: 'client/',
-        outdir: 'docs/'
-      }
+  grunt.config('markdox', {
+    dist: {
+      files: [
+        { src: 'src/events.js', dest: 'docs/api.md' }
+      ]
     }
   });
 };

@@ -5,9 +5,12 @@
 module.exports = function (grunt) {
   'use strict';
 
-  grunt.config('open', {
-    dev: {
-      path: 'docs/index.html'
+  grunt.config('bump', {
+    options: {
+      push: false,
+      createTag: false,
+      commitFiles: ['-a'],
+      commitMessage: 'Start of release %VERSION%'
     }
   });
 };

@@ -9,7 +9,10 @@ module.exports = function (grunt) {
     test: {
       src: ['tests/index.html'],
       options: {
-        run: true
+        run: true,
+        log: true,
+        logErrors: true,
+        timeout: 20000
       }
     }
   });

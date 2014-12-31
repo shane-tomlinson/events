@@ -15,6 +15,10 @@
 // jscs: enable
   'use strict';
 
+  function hasHandler(handlers, eventName) {
+    return eventName in handlers;
+  }
+
   module.exports = {
     /**
      * Add an event listener
@@ -38,17 +42,12 @@
      * @param {function} callback
      */
     off: function (eventName, callback) {
-      if (! (this._handlers &&
-             this._handlers[eventName])) {
+      if (! hasHandler(this._handlers, eventName)) {
         return;
       }
 
-      var self = this;
-      this._handlers[eventName].forEach(function(handler, index) {
-        if (handler === callback ||
-            handler.__wraps === callback) {
-          self._handlers[eventName].splice(index, 1);
-        }
+      this._handlers[eventName] = this._handlers[eventName].filter(function(handler) {
+        return (! (handler === callback || handler.__wraps === callback));
       });
     },
 
@@ -58,8 +57,7 @@
      * @param {string} eventName
      */
     trigger: function (eventName/*, args...*/) {
-      if (! (this._handlers &&
-             this._handlers[eventName])) {
+      if (! hasHandler(this._handlers, eventName)) {
         return;
       }
 

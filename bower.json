@@ -1,0 +1,27 @@
+{
+  "name": "events",
+  "version": "0.0.1",
+  "description": "A Backbone-like events system",
+  "author": "Shane Tomlinson <shane@shanetomlinson.com>",
+  "main": "events.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "DOM",
+    "jQuery",
+    "mircolibrary",
+    "DOM",
+    "manipulation"
+  ],
+  "license": "MPL 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
